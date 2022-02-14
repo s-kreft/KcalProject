@@ -10,4 +10,5 @@ public class KcalProjectApplication {
         SpringApplication.run(KcalProjectApplication.class, args);
     }
 
+
 }
