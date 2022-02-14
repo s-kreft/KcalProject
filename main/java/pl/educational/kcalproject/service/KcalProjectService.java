@@ -3,11 +3,12 @@ package pl.educational.kcalproject.service;
 import org.springframework.stereotype.Service;
 import pl.educational.kcalproject.components.User;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
 public class KcalProjectService {
-    private List<User> db;
+    private List<User> db = new ArrayList<>();
 
 
     public void makeUser() {
@@ -15,7 +16,8 @@ public class KcalProjectService {
         db.add(user1);
     }
 
-    public User getUser() {
+    public List<User> getUser() {
+        makeUser();
         return db;
     }
 }
