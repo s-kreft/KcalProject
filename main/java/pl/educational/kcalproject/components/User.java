@@ -1,11 +1,19 @@
 package pl.educational.kcalproject.components;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name="User")
 public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
     private double weight;
 
+    public User() {
 
+    }
     public User(int id, String name, double weight) {
         this.id = id;
         this.name = name;
